@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Selected writing and publications by Ryan Boivin. Essays, reports, and op-eds available here.">
+<link rel="icon" href="images/favicon.ico">
+<link rel="canonical" href="https://ryanboivin.ca/publications">
+
+<meta property="og:title" content="Ryan Boivin | Publications">
+<meta property="og:description" content="Selected writing and publications by Ryan Boivin. Essays, reports, and op-eds.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ryanboivin.ca/images/social-share.jpg">
+<meta property="og:url" content="https://ryanboivin.ca/publications">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ryan Boivin | Publications">
+<meta name="twitter:description" content="Selected writing and publications by Ryan Boivin. Essays, reports, and op-eds.">
+<meta name="twitter:image" content="https://ryanboivin.ca/images/social-share.jpg">
+
+<title>Ryan Boivin | Publications</title>
+
+<style>
+/* ==========================
+   Reset & Fonts
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* ==========================
+   Navbar
+========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 0.25rem 0;
+  font-weight: 500;
+}
+
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.25s ease;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+.navbar .hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+  position: relative;
+  background-color: #0f172a; /* Dark background for publications page */
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  opacity: 0.85;
+}
+
+/* ==========================
+   Publications Top Links / Filters
+========================== */
+.publications-top-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+
+.publications-top-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 0.25rem 0; /* MATCHES NAVBAR */
+  position: relative;
+  font-size: 1rem;
+}
+
+.publications-top-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.25s ease;
+}
+
+.publications-top-links a:hover::after {
+  width: 100%;
+}
+
+/* ==========================
+   Publications Grid
+========================== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.grid-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item h3 {
+  margin: 1rem;
+  font-size: 1.125rem;
+}
+
+.grid-item p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .publications-top-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="index.html">
+    <img src="images/logo2.png" alt="Logo" class="logo">
+  </a>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="publications.html">Publications</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <div class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div>
+    <h1>Selected Writing</h1>
+    <p>Reports, essays, and op-ed articles. Published here only.</p>
+  </div>
+</section>
+
+<!-- Publications Top Links -->
+<div class="publications-top-links">
+  <a href="#all">All</a>
+  <a href="#reports">Reports</a>
+  <a href="#essays">Essays</a>
+  <a href="#op-eds">Op-Eds</a>
+</div>
+
+<!-- Publications Grid -->
+<section class="grid">
+  <div class="grid-item" id="reports">
+    <h3>Annual Policy Report</h3>
+    <p>An in-depth analysis of policy trends and recommendations for government decision-makers.</p>
+  </div>
+
+  <div class="grid-item" id="essays">
+    <h3>Organizational Effectiveness Essay</h3>
+    <p>A reflective essay on operational efficiency and data-driven decision-making in nonprofits and businesses.</p>
+  </div>
+
+  <div class="grid-item" id="op-eds">
+    <h3>Op-Ed on Political Analytics</h3>
+    <p>An opinion piece discussing the role of data and analytics in modern campaigns and advocacy work.</p>
+  </div>
+
+  <div class="grid-item" id="reports">
+    <h3>Quarterly Metrics Report</h3>
+    <p>Insights on organizational performance metrics and strategic recommendations for improvement.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy;2026 Ryan Boivin</p>
+  <p>Independent analytical and operational consulting.</p>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
+
