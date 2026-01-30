@@ -1,4 +1,3 @@
-
 <style>
 /* ==========================
    Reset & Fonts
@@ -369,4 +368,8 @@ footer a {
     font-size: 2rem;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 </style>
