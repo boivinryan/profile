@@ -463,25 +463,45 @@ html {
 
 <!-- Contact Section -->
 <section id="contact">
+ <section id="contact">
   <h2>CONTACT</h2>
-  <p>Let’s talk.
-For inquiries, proposals, or confidential discussions:</p>
+  <p>Let’s talk. For inquiries, proposals, or confidential discussions:</p>
 
-  <form action="https://formspree.io/f/mykjpyro" method="POST">
-<input type="hidden" name="_redirect" value="https://ryanboivin.ca/thank-you">
-
+  <form id="contact-form" action="https://formspree.io/f/mykjpyro" method="POST">
+    <input type="hidden" name="_redirect" value="false"> <!-- Disable Formspree's internal redirect -->
 
     <input type="text" name="name" placeholder="Name" required>
-
     <input type="email" name="email" placeholder="Email" required>
-
     <input type="text" name="subject" placeholder="Subject" required>
-
     <textarea name="message" placeholder="Message" required></textarea>
-
     <button type="submit">Send Message</button>
   </form>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+
+      var formData = new FormData(this);
+      
+      fetch('https://formspree.io/f/mykjpyro', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          // Redirect to thank-you page after successful submission
+          window.location.href = 'https://ryanboivin.ca/thank-you.html';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      })
+      .catch(error => {
+        alert('An error occurred: ' + error);
+      });
+    });
+  </script>
 </section>
+
 
 <!-- Footer -->
 <footer>
