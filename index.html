@@ -1,72 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryan Boivin | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reliable digital and operations professional with long-term remote experience supporting nonprofits, technology companies, and public institutions. I focus on keeping systems running smoothly and improving them over time.">
+<link rel="icon" href="/favicon.ico">
+<link rel="canonical" href="https://ryanboivin.ca">
+<meta property="og:title" content="Ryan Boivin | Professional Portfolio">
+<meta property="og:description" content="Political and Economic Analysis.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ryanboivin.ca/images/social-share.jpg">
+<meta property="og:url" content="https://ryanboivin.ca/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ryan Boivin | Professional Portfolio">
+<meta name="twitter:description" content="alm, reliable digital and operations professional with long-term remote experience supporting nonprofits, technology companies, and public institutions.">
+<meta name="twitter:image" content="https://ryanboivin.ca/images/social-share.jpg">
+
+
+<title>Ryan Boivin | Professional Portfolio</title>
+
+<style>
+/* ==========================
+   Reset & Fonts
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* ==========================
+   Navbar
+========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 0.25rem 0;
+  font-weight: 500;
+}
+
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.25s ease;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+.navbar .hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+/* ==========================
+   Hero Section (Updated)
+========================== */
+.hero {
+  position: relative;
+  background-image: url('images/map-blue.jpg'); /* Your new image */
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 2rem;
+  color: #e5e7eb; /* off-white */
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+  min-height: 90vh;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Gradient overlay using ::before */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.85) 0%,
+    rgba(15, 23, 42, 0.75) 35%,
+    rgba(15, 23, 42, 0.35) 60%,
+    rgba(15, 23, 42, 0.05) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content container inside hero */
+.hero-content {
+  position: relative;
+  max-width: 640px;
+  z-index: 2; /* above gradient */
+}
+
+/* Hero heading */
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Hero paragraph */
+.hero p {
+  font-size: 1.125rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+/* Hero CTA button */
+.hero .btn {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e5e7eb;
+  background: transparent;
+  border: 1px solid rgba(229, 231, 235, 0.3);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+}
+
+.hero .btn:hover,
+.hero .btn:focus {
+  background-color: rgba(229, 231, 235, 0.08);
+  border-color: rgba(229, 231, 235, 0.6);
+  color: #e5e7eb;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero {
+    background-position: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+}
+
+/* ==========================
+   Sections
+========================== */
+section {
+  padding: 5rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+p.center {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+/* ==========================
+   Grid System
+========================== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.grid-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.grid-item h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.grid-item p {
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   Skills Bars
+========================== */
+.skill-bar {
+  margin-bottom: 1rem;
+}
+
+.skill-bar span {
+  display: block;
+  font-weight: bold;
+}
+
+.skill-bar .bar-bg {
+  width: 100%;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.skill-bar .bar-fill {
+  height: 20px;
+  width: 0;
+  background: #333;
+  border-radius: 20px;
+  text-align: right;
+  line-height: 20px;
+  color: white;
+  padding-right: 5px;
+  transition: width 1s ease-in-out;
+}
+
+
+/* ==========================
+   Contact Form
+========================== */
+form input, form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* ==========================
+   Modal
+========================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+}
+
+.modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+</style>
 </head>
-
 <body>
-  <header>
+
+<!-- Navbar -->
+<nav class="navbar">
+<img src="images/logo2.png" alt="Logo" class="logo">
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+  <div class="hero-content">
     <h1>Ryan Boivin</h1>
-    <p class="tagline">
-      Remote Operations • Digital Support • Problem Solver
-    </p>
-  </header>
+    <p>Data-driven strategy for high-stakes decisions.</p>
+    <a href="#about" class="btn">Let's Work Together</a>
+  </div>
+</section>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Calm, reliable digital and operations professional with long-term
-        remote experience supporting nonprofits, technology companies,
-        and public institutions. I focus on keeping systems running
-        smoothly and improving them over time.
-      </p>
-    </section>
+<!-- Services -->
+<section id="services">
+  <h2>SERVICES</h2>
+  <p class="center">Reliable digital and operations professional with long-term remote experience supporting nonprofits, technology companies, and public institutions. I focus on keeping systems running smoothly and improving them over time.</p>
+  <div class="grid">
+    <div class="grid-item">
+    
+      <h3>Political Analytics & Consulting</h3>
+      <p>We support political campaigns, advocacy groups, and issue-driven organizations with analytical insight and strategic execution.</p>
+    </div>
+    <div class="grid-item">
+      
+      <h3>Business Analytics & Consulting</h3>
+      <p>Using data-driven technology to find solutions in an ever changing world.</p>
+    </div>
+    <div class="grid-item">
+      
+      <h3>Operations</h3>
+      <p>Ryan Boivin operates as a sole proprietorship, offering senior-level expertise with hands-on execution. No layers, no handoffs, no junior analysts learning on your budget.</p>
+    </div>
+    <div class="grid-item">
+      
+      <h3>Engagements</h3>
+      <p>Projects range from short-term analytical sprints to ongoing advisory relationships. Engagements are tailored based on scope, timeline, and sensitivity.</p>
+<p>If you’re facing a decision where accuracy matters more than comfort, Ryan Boivin can help.</p>
+    </div>
+  </div>
+</section>
 
-    <section>
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>Remote Operations</li>
-        <li>Documentation & Process Improvement</li>
-        <li>Customer & Stakeholder Support</li>
-        <li>Basic Web & Technical Skills</li>
-        <li>Independent & Reliable Work</li>
-      </ul>
-    </section>
 
-    <section>
-      <h2>Projects</h2>
-      <p>
-        Portfolio projects coming soon. This site is intentionally simple
-        and will evolve over time.
-      </p>
-    </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>
-        Email:
-        <a href="mailto:rboivin@alumni.utoronto.ca">
-          rboivin@alumni.utoronto.ca
-        </a>
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://linkedin.com/in/ryanboivin" target="_blank">
-          linkedin.com/in/ryanboivin
-        </a>
-      </p>
-    </section>
-  </main>
+</section>
+<!-- Modal -->
+<div id="modal" class="modal">
+  <span id="modalClose" style="position:absolute;top:20px;right:35px;font-size:40px;color:white;cursor:pointer;">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
 
-  <footer>
-    <p>© 2026 Ryan Boivin</p>
-  </footer>
+<!-- Contact Section -->
+<section id="contact">
+  <h2>CONTACT</h2>
+  <p>Let’s talk.
+For inquiries, proposals, or confidential discussions:</p>
+
+  <form action="https://formspree.io/f/mykjpyro" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <input type="text" name="subject" placeholder="Subject" required>
+
+    <textarea name="message" placeholder="Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy;2026 Ryan Boivin</p>
+</footer>
+
+<script>
+// Hamburger toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+});
+
+// Modal for images
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const modalCaption = document.getElementById('modalCaption');
+
+document.querySelectorAll('.grid-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+    modalCaption.textContent = img.alt;
+  });
+});
+
+document.getElementById('modalClose').onclick = () => {
+  modal.style.display = 'none';
+};
+</script>
 </body>
 </html>
-
-
-
