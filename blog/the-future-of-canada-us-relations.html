@@ -3,28 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="An analysis of Canada–U.S. trade relations and efforts to diversify with Europe and China.">
-
-<title>The Future of Canada‑U.S. Relations | Ryan Boivin</title>
-
+<meta name="description" content="Data-driven political, economic, and operational analysis for high-stakes decisions.">
 <link rel="icon" href="/images/favicon.ico">
-<link rel="canonical" href="https://ryanboivin.ca/blog/the-future-of-canada-us-relations.html">
+<link rel="canonical" href="https://ryanboivin.ca">
+<meta property="og:title" content="Ryan Boivin | Blog">
+<meta property="og:description" content="Political and Economic Analysis.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ryanboivin.ca/images/social-share.jpg">
+<meta property="og:url" content="https://ryanboivin.ca/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ryan Boivin | Professional Portfolio">
+<meta name="twitter:description" content="Data-driven political, economic, and operational analysis for high-stakes decisions.">
+<meta name="twitter:image" content="https://ryanboivin.ca/images/social-share.jpg">
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 /* ---------------------------
    Base typography
 --------------------------- */
-body, h1, h2, h3, h4, h5, h6 {
+body, h1,h2,h3,h4,h5,h6 {
   font-family: "Montserrat", sans-serif;
 }
 
 /* ---------------------------
-   Dark theme
+   Dark theme (minimal)
 --------------------------- */
 body {
   background-color: #121212;
@@ -41,7 +43,6 @@ body {
 
 a {
   color: #9bbcff;
-  text-decoration: none;
 }
 
 a:hover {
@@ -65,16 +66,105 @@ hr {
 }
 
 /* ---------------------------
-   Buttons
+   Buttons & surfaces
 --------------------------- */
 .w3-light-grey {
   background-color: #1e1e1e !important;
   color: #e0e0e0 !important;
 }
 
+.w3-dark-grey {
+  background-color: #2a2a2a !important;
+}
+
 .w3-button:hover {
   background-color: #2a2a2a !important;
 }
+
+/* --------------------
+   Publications
+-------------------- */
+.publication {
+  background-color: #1a1a1a;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-left: 4px solid #443;
+}
+
+.pub-type {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #998;
+  margin-bottom: 4px;
+}
+
+.pub-title {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.pub-desc {
+  color: #b5b5b5;
+}
+/* ---------------------------
+   Hamburger button
+--------------------------- */
+.w3-top.w3-button {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+/* ---------------------------
+   Forms
+--------------------------- */
+.w3-input {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+.w3-input:focus {
+  border-color: #667;
+  outline: none;
+}
+
+/* ---------------------------
+   Footer
+--------------------------- */
+footer {
+      background-color: transparent;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    footer a {
+      display: inline-block;
+      margin: 0 10px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    footer a img {
+      width: 40px; /* adjust size as needed */
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+.section-divider {
+  border: none;
+  height: 1px;
+  margin: 4rem 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #443,
+    transparent
+  );
+}
+
 
 /* ---------------------------
    Article styling
@@ -131,34 +221,38 @@ footer a:hover {
 
 <body>
 
-<!-- Sidebar (desktop) -->
+<!-- Sidebar with image -->
 <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
   <div class="bgimg"></div>
 </nav>
 
-<!-- Mobile Sidebar -->
+<!-- Hidden Sidebar -->
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
      style="display:none;padding-top:150px;right:0;z-index:2"
      id="mySidebar">
   <a href="javascript:void(0)"
      onclick="closeNav()"
-     class="w3-button w3-black w3-xxxlarge w3-display-topright">
+     class="w3-button w3-black w3-xxxlarge w3-display-topright"
+     style="padding:0 12px;">
     <i class="fa fa-remove"></i>
   </a>
 
   <div class="w3-bar-block w3-center">
-    <a href="/index.html" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Home</a>
-    <a href="/index.html#about" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">About</a>
-    <a href="/index.html#publications" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Publications</a>
-    <a href="/blog.html" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Blog</a>
-    <a href="/index.html#contact" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Contact</a>
+   <a href="index.html" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Home</a>
+<a href="index.html#about" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">About</a>
+<a href="index.html#publications" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Publications</a>
+<a href="blog.html" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Blog</a>
+<a href="index.html#contact" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Contact</a>
   </div>
 </nav>
 
-<main class="w3-main w3-padding-large" style="margin-left:40%">
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
 
   <!-- Hamburger -->
-  <span class="w3-button w3-top w3-xxlarge" style="right:0;" onclick="openNav()">
+  <span class="w3-button w3-top w3-xxlarge"
+        style="width:auto;right:0;"
+        onclick="openNav()">
     <i class="fa fa-bars"></i>
   </span>
 
@@ -209,7 +303,6 @@ footer a:hover {
 
   </article>
 
-  
 
  <!-- Footer -->
   <footer>
