@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Blog by Ryan Boivin — analysis, commentary, and long-form writing.">
+
+<title>Blog | Ryan Boivin</title>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.w3-main {
+  background-color: #121212;
+}
+
+a {
+  color: #9bbcff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c7d8ff;
+}
+
+hr {
+  border-color: #2a2a2a;
+}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/images/ryan.jpg");
+  min-height: 100%;
+  filter: brightness(0.75);
+}
+
+/* Blog entries */
+.blog-post {
+  background-color: #1a1a1a;
+  padding: 20px;
+  margin-bottom: 24px;
+  border-left: 4px solid #444;
+}
+
+.blog-title {
+  font-size: 1.25em;
+  margin-bottom: 6px;
+}
+
+.blog-meta {
+  font-size: 0.85em;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.blog-excerpt {
+  color: #b5b5b5;
+}
+
+<style>
+/* ---------------------------
+   Base typography
+--------------------------- */
+body, h1,h2,h3,h4,h5,h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ---------------------------
+   Dark theme (minimal)
+--------------------------- */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.w3-main {
+  background-color: #121212;
+}
+
+.w3-text-grey {
+  color: #b0b0b0 !important;
+}
+
+a {
+  color: #9bbcff;
+}
+
+a:hover {
+  color: #c7d8ff;
+}
+
+hr {
+  border-color: #2a2a2a;
+}
+
+/* ---------------------------
+   Sidebar image
+--------------------------- */
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/images/ryan.jpg");
+  min-height: 100%;
+  filter: brightness(0.75);
+}
+
+/* ---------------------------
+   Buttons & surfaces
+--------------------------- */
+.w3-light-grey {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+.w3-dark-grey {
+  background-color: #2a2a2a !important;
+}
+
+.w3-button:hover {
+  background-color: #2a2a2a !important;
+}
+
+/* --------------------
+   Publications
+-------------------- */
+.publication {
+  background-color: #1a1a1a;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-left: 4px solid #444;
+}
+
+.pub-type {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.pub-title {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.pub-desc {
+  color: #b5b5b5;
+}
+/* ---------------------------
+   Hamburger button
+--------------------------- */
+.w3-top.w3-button {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+/* ---------------------------
+   Forms
+--------------------------- */
+.w3-input {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+.w3-input:focus {
+  border-color: #666;
+  outline: none;
+}
+
+/* ---------------------------
+   Footer
+--------------------------- */
+footer {
+      background-color: transparent;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    footer a {
+      display: inline-block;
+      margin: 0 10px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    footer a img {
+      width: 40px; /* adjust size as needed */
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    footer a:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+.section-divider {
+  border: none;
+  height: 1px;
+  margin: 4rem 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #444,
+    transparent
+  );
+}
+
+
+</style>
+
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
+     style="display:none;padding-top:150px;right:0;z-index:2"
+     id="mySidebar">
+  <a href="javascript:void(0)"
+     onclick="closeNav()"
+     class="w3-button w3-black w3-xxxlarge w3-display-topright"
+     style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+
+  <div class="w3-bar-block w3-center">
+  <a href="index.html" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Home</a>
+<a href="index.html#about" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">About</a>
+<a href="index.html#publications" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Publications</a>
+<a href="blog.html" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Blog</a>
+<a href="index.html#contact" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Contact</a>
+
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Hamburger -->
+  <span class="w3-button w3-top w3-xxlarge"
+        style="width:auto;right:0;"
+        onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:96px 16px">
+    <h1 class="w3-jumbo"><b>Blog</b></h1>
+    <p class="w3-text-grey">
+      Notes, analysis, and long-form writing.
+    </p>
+  </header>
+
+  <!-- Blog List -->
+  <div class="w3-content w3-padding-32">
+
+    <div class="blog-post">
+      <div class="blog-title">
+        <a href="#">Why Maintenance Work Is Undervalued</a>
+      </div>
+      <div class="blog-meta">
+        January 2026 · Systems & Work
+      </div>
+      <div class="blog-excerpt">
+        A reflection on why sustaining systems matters more than launching them—and why organizations struggle to reward that work.
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <div class="blog-title">
+        <a href="#">Institutions Don’t Fail All at Once</a>
+      </div>
+      <div class="blog-meta">
+        December 2025 · Policy
+      </div>
+      <div class="blog-excerpt">
+        Institutional decline is usually quiet, incremental, and invisible until the moment it isn’t.
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <div class="blog-title">
+        <a href="#">On Working Without Applause</a>
+      </div>
+      <div class="blog-meta">
+        November 2025 · Commentary
+      </div>
+      <div class="blog-excerpt">
+        Some roles are defined by what never happens. This is about learning to take pride in that.
+      </div>
+    </div>
+
+  </div>
+
+ 
+ <!-- Footer -->
+  <footer>
+    <a href="mailto:boivinryan1@gmail.com" target="_blank">
+      <img src="icons/email.png" alt="Email">
+    </a>
+    <a href="https://facebook.com/ryan.m.boivin" target="_blank">
+      <img src="icons/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/ryanmichaelboivin" target="_blank">
+      <img src="icons/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://linkedin.com/in/ryanboivin" target="_blank">
+      <img src="icons/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://x.com/RyanBoivin" target="_blank">
+      <img src="icons/x.png" alt="X">
+    </a>
+    <a href="https://youtube.com/@Ryan-Boivin" target="_blank">
+      <img src="icons/youtube.png" alt="YouTube">
+    </a>
+  </footer>
+
+</footer>
+
+</footer>
+
+
+<p style="text-align: center;">&copy;2026 Ryan Boivin</p>
+  <!-- End footer -->
+  </footer>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
