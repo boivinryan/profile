@@ -3,21 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Data-driven political, economic, and operational analysis for high-stakes decisions.">
-<link rel="icon" href="/images/favicon.ico">
-<link rel="canonical" href="https://ryanboivin.ca">
-<meta property="og:title" content="Ryan Boivin | Professional Portfolio">
-<meta property="og:description" content="Political and Economic Analysis.">
+
+<meta name="description" content="The art portfolio of Ryan Boivin. A collection of portrait studies, figurative drawings, and expressive paintings.">
+
+<meta property="og:title" content="Ryan Boivin | Art Portfolio">
+<meta property="og:description" content="Selected artworks, portrait studies, and paintings by Ryan Boivin.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://ryanboivin.ca/images/social-share.jpg">
-<meta property="og:url" content="https://ryanboivin.ca/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ryan Boivin | Professional Portfolio">
-<meta name="twitter:description" content="Data-driven political, economic, and operational analysis for high-stakes decisions.">
-<meta name="twitter:image" content="https://ryanboivin.ca/images/social-share.jpg">
 
-
-<title>Ryan Boivin | Professional Portfolio</title>
+<title>Ryan Boivin | Art Portfolio</title>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -25,315 +18,269 @@
 
 <style>
 
-  /* ---------------------------
-   Base typography
---------------------------- */
-body, h1,h2,h3,h4,h5,h6 {
-  font-family: "Montserrat", sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-/* ---------------------------
-   Dark theme (minimal)
---------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #121212;
+  background: #121212;
   color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 
 .w3-main {
-  background-color: #121212;
+  background: #121212;
 }
 
-.w3-text-grey {
-  color: #b0b0b0 !important;
+h1, h2, h3, h4 {
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
-  color: #9bbcff;
+  color: #bca77b;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #c7d8ff;
+  color: #e0d0a8;
 }
 
 hr {
-  border-color: #2a2a2a;
+  border-color: #333;
 }
 
-/* ---------------------------
-   Sidebar image
---------------------------- */
+/* Navigation */
+
 .bgimg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-image: url("/images/ryan.jpg");
+  background-position: center;
+  background-size: cover;
   min-height: 100%;
-  filter: brightness(0.75);
+  filter: brightness(0.65);
 }
 
-/* ---------------------------
-   Buttons & surfaces
---------------------------- */
-.w3-light-grey {
-  background-color: #1e1e1e !important;
-  color: #e0e0e0 !important;
-}
-
-.w3-dark-grey {
-  background-color: #2a2a2a !important;
+.w3-sidebar {
+  background: #090909;
 }
 
 .w3-button:hover {
-  background-color: #2a2a2a !important;
+  background: #292929 !important;
+  color: #fff !important;
 }
 
-/* --------------------
-   Publications
--------------------- */
-.publication {
-  background-color: #1a1a1a;
-  padding: 16px;
-  margin-bottom: 16px;
-  border-left: 4px solid #443;
+/* Header */
+
+.hero {
+  padding: 110px 20px 80px;
+  text-align: center;
 }
 
-.pub-type {
-  font-size: 0.85em;
-  text-transform: uppercase;
-  color: #998;
-  margin-bottom: 4px;
+.hero h1 {
+  font-size: 55px;
+  letter-spacing: 7px;
+  font-weight: 400;
 }
 
-.pub-title {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-}
-
-.pub-desc {
-  color: #b5b5b5;
-}
-/* ---------------------------
-   Hamburger button
---------------------------- */
-.w3-top.w3-button {
-  background-color: #1a1a1a !important;
-  color: #e0e0e0 !important;
-}
-
-/* ---------------------------
-   Forms
---------------------------- */
-.w3-input {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  border: 1px solid #333;
-}
-
-.w3-input:focus {
-  border-color: #667;
-  outline: none;
-}
-
-/* ---------------------------
-   Footer
---------------------------- */
-footer {
-      background-color: transparent;
-      padding: 40px 0;
-      text-align: center;
-    }
-
-    footer a {
-      display: inline-block;
-      margin: 0 10px;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-
-    footer a img {
-      width: 40px; /* adjust size as needed */
-      height: 40px;
-      vertical-align: middle;
-    }
-
-    footer a:hover {
-      transform: scale(1.2);
-      opacity: 0.8;
-    }
-.section-divider {
-  border: none;
-  height: 1px;
-  margin: 4rem 0;
-  background: linear-gradient(
-    to right,
-    transparent,
-    #443,
-    transparent
-  );
-}
-
-
-
-
-/* Blog entries */
-.blog-post {
-  background-color: #1a1a1a;
-  padding: 20px;
-  margin-bottom: 24px;
-  border-left: 4px solid #444;
-}
-
-.blog-title {
-  font-size: 1.25em;
-  margin-bottom: 6px;
-}
-
-.blog-meta {
-  font-size: 0.85em;
+.hero p {
   color: #999;
+  letter-spacing: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* Sections */
+
+.section {
+  padding: 45px 0;
+}
+
+.section-heading {
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   margin-bottom: 12px;
 }
 
-.blog-excerpt {
-  color: #b5b5b5;
-}
-
-
-/* ---------------------------
-   Sidebar image
---------------------------- */
-.bgimg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("/images/ryan.jpg");
-  min-height: 100%;
-  filter: brightness(0.75);
-}
-
-/* ---------------------------
-   Buttons & surfaces
---------------------------- */
-.w3-light-grey {
-  background-color: #1e1e1e !important;
-  color: #e0e0e0 !important;
-}
-
-.w3-dark-grey {
-  background-color: #2a2a2a !important;
-}
-
-.w3-button:hover {
-  background-color: #2a2a2a !important;
-}
-
-/* --------------------
-   Publications
--------------------- */
-.publication {
-  background-color: #1a1a1a;
-  padding: 16px;
-  margin-bottom: 16px;
-  border-left: 4px solid #444;
-}
-
-.pub-type {
-  font-size: 0.85em;
-  text-transform: uppercase;
+.section-intro {
   color: #999;
-  margin-bottom: 4px;
+  font-size: 13px;
+  margin-bottom: 35px;
+  line-height: 1.9;
 }
 
-.pub-title {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-}
-
-.pub-desc {
-  color: #b5b5b5;
-}
-/* ---------------------------
-   Hamburger button
---------------------------- */
-.w3-top.w3-button {
-  background-color: #1a1a1a !important;
-  color: #e0e0e0 !important;
-}
-
-/* ---------------------------
-   Forms
---------------------------- */
-.w3-input {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  border: 1px solid #333;
-}
-
-.w3-input:focus {
-  border-color: #666;
-  outline: none;
-}
-
-/* ---------------------------
-   Footer
---------------------------- */
-footer {
-      background-color: transparent;
-      padding: 40px 0;
-      text-align: center;
-    }
-
-    footer a {
-      display: inline-block;
-      margin: 0 10px;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-
-    footer a img {
-      width: 40px; /* adjust size as needed */
-      height: 40px;
-      vertical-align: middle;
-    }
-
-    footer a:hover {
-      transform: scale(1.2);
-      opacity: 0.8;
-    }
 .section-divider {
   border: none;
   height: 1px;
-  margin: 4rem 0;
   background: linear-gradient(
     to right,
     transparent,
-    #444,
+    #554b39,
     transparent
   );
+  margin: 55px 0;
 }
 
+/* Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 22px;
+}
+
+.artwork {
+  background: #1a1a1a;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.artwork:hover {
+  transform: translateY(-5px);
+}
+
+.artwork-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  background: #242424;
+  transition: opacity 0.3s ease;
+}
+
+.artwork:hover .artwork-image {
+  opacity: 0.85;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}
+
+.artwork-info {
+  padding: 18px;
+}
+
+.artwork-title {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.artwork-meta {
+  color: #999;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.artwork-medium {
+  color: #bca77b;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* About */
+
+.about-text {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 2.1;
+  max-width: 750px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 45px 0;
+  color: #777;
+  font-size: 11px;
+}
+
+footer a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.2s;
+}
+
+footer a img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+footer a:hover {
+  transform: scale(1.15);
+}
+
+/* Mobile */
+
+@media screen and (max-width: 900px) {
+
+  .w3-main {
+    margin-left: 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .artwork-info {
+    padding: 12px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+}
 
 </style>
-
 </head>
 
 <body>
 
+<!-- Desktop sidebar -->
 
-<!-- Sidebar with image -->
-<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+<nav class="w3-sidebar w3-hide-medium w3-hide-small"
+     style="width:40%">
   <div class="bgimg"></div>
 </nav>
 
-<!-- Hidden Sidebar -->
+<!-- Mobile navigation -->
+
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
-     style="display:none;padding-top:150px;right:0;z-index:2"
+     style="display:none;padding-top:120px;right:0;z-index:2"
      id="mySidebar">
+
   <a href="javascript:void(0)"
      onclick="closeNav()"
-     class="w3-button w3-black w3-xxxlarge w3-display-topright"
-     style="padding:0 12px;">
+     class="w3-button w3-black w3-xxxlarge w3-display-topright">
     <i class="fa fa-remove"></i>
   </a>
+
   <div class="w3-bar-block w3-center">
    <a href="index.html" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">Home</a>
 <a href="index.html#about" class="w3-bar-item w3-button w3-text-grey" onclick="closeNav()">About</a>
@@ -344,40 +291,99 @@ footer {
   </div>
 </nav>
 
-<!-- Page Content -->
+
+<!-- Main content -->
+
 <div class="w3-main w3-padding-large" style="margin-left:40%">
 
   <!-- Hamburger -->
+
   <span class="w3-button w3-top w3-xxlarge"
-        style="width:auto;right:0;"
+        style="width:auto;right:0;background:#1a1a1a"
         onclick="openNav()">
     <i class="fa fa-bars"></i>
   </span>
-  <!-- Header -->
-  <header class="w3-container w3-center" style="padding:96px 16px">
-    <h1 class="w3-jumbo"><b>Blog</b></h1>
-    <p class="w3-text-grey">
-      Notes, analysis, and long-form writing.
+
+
+  <!-- Hero -->
+
+  <header class="hero">
+
+    <h1>ART PORTFOLIO</h1>
+
+    <p>Selected Works · 2005–2010</p>
+
+    <p style="margin-top:30px;color:#777">
+      RYAN BOIVIN
     </p>
+
   </header>
 
-  <!-- Blog List -->
-  <div class="w3-content w3-padding-32">
 
- <div class="blog-post">
-    <div class="blog-title">
-      <a href="/blog/the-future-of-canada-us-relations.html">The Future of Canada-U.S. Relations</a>
-    </div>
-    <div class="blog-meta">
-      February 2026 · International Trade
-    </div>
-    <div class="blog-excerpt">
-      An analysis of the structural, economic, and political forces shaping the future of Canada–U.S. relations in a period of strategic realignment.
-    </div>
-  </div>
+  <div class="w3-content" style="max-width:950px">
 
-  <!-- Blog List ADD MORE HERE -->
 
+    <!-- Artist statement -->
+
+    <section id="about" class="section">
+
+      <h2 class="section-heading">The Artist</h2>
+
+      <hr style="width:55px;border:2px solid #bca77b;margin-left:0">
+
+      <p class="about-text">
+
+        This portfolio presents a selection of artworks by Ryan Boivin,
+        spanning figurative portraiture, academic drawing, and
+        contemporary expressionist painting.
+
+        <br><br>
+
+        The collection explores the human face, urban environments,
+        architectural forms, colour, and atmosphere through a variety
+        of traditional artistic mediums.
+
+        <br><br>
+
+        From detailed graphite portrait studies to expressive
+        cityscapes, these works document an evolving interest in
+        representation, observation, and visual expression.
+
+      </p>
+
+    </section>
+
+
+    <hr class="section-divider">
+
+
+    <!-- Portrait drawings -->
+
+    <section id="portraits" class="section">
+
+      <h2 class="section-heading">01 — Portrait Studies</h2>
+
+      <p class="section-intro">
+        Figurative drawing, facial anatomy, and the study of human expression.
+      </p>
+
+      <div class="gallery">
+
+
+        <!-- Artwork 1 -->
+
+        <article class="artwork">
+
+          <img src="images/art/the-girl.jpg"
+               alt="The Girl portrait study"
+               class="artwork-image">
+
+          <div class="artwork-info">
+
+            <h3 class="artwork-title">The Girl – Portrait Study</h3>
+
+            <div class="artwork-meta">
+              2006<br>   
 
  <!-- Footer -->
   <footer>
