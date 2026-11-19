@@ -125,17 +125,22 @@ hr {
   margin: 55px 0;
 }
 
+
 /* Gallery */
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px 22px;
+  align-items: stretch;
 }
 
 .artwork {
   background: #1a1a1a;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   transition: transform 0.3s ease;
 }
 
@@ -143,33 +148,30 @@ hr {
   transform: translateY(-5px);
 }
 
-.artwork-image {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  display: block;
-  background: #242424;
-  transition: opacity 0.3s ease;
-}
+/* Consistent image display area */
 
-.artwork:hover .artwork-image {
-  opacity: 0.85;
-}
-
-.image-placeholder {
+.artwork-image-container {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 420px;
   background: #202020;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
-  text-align: center;
-  padding: 20px;
+  overflow: hidden;
 }
+
+.artwork-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Artwork information */
 
 .artwork-info {
   padding: 18px;
+  flex-grow: 1;
 }
 
 .artwork-title {
@@ -190,6 +192,33 @@ hr {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 8px;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .artwork-image-container {
+    height: 320px;
+  }
+
+  .artwork-info {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .artwork-image-container {
+    height: 400px;
+  }
 }
 
 /* About */
@@ -360,36 +389,29 @@ footer a:hover {
 <!-- Portrait drawings -->
 <section id="portraits" class="section">
 
-  <!-- Artwork 1: The Face -->
-  <h2 class="section-heading">01 — The Face</h2>
 
-  <p class="section-intro">
-    Acrylic on canvas. Abstract face. 2006.
-  </p>
+<article class="artwork">
 
-  <div class="gallery">
-
-    <article class="artwork">
-
-      <img
-        src="https://raw.githubusercontent.com/boivinryan/profile/ca0a559a9a6dc4b74644fa8c735e9768773a3014/images/face.jpg"
-        alt="The Face"
-        class="artwork-image"
-      >
-
-      <div class="artwork-info">
-        <h3 class="artwork-title">
-          The Face. 2006. Acrylic on canvas
-        </h3>
-
-        <div class="artwork-meta">
-          2006
-        </div>
-      </div>
-
-    </article>
-
+  <div class="artwork-image-container">
+    <img
+      src="https://raw.githubusercontent.com/boivinryan/profile/ca0a559a9a6dc4b74644fa8c735e9768773a3014/images/face.jpg"
+      alt="The Face, 2006, acrylic on canvas"
+      class="artwork-image"
+      loading="lazy"
+    >
   </div>
+
+  <div class="artwork-info">
+    <h3 class="artwork-title">
+      The Face. 2006. Acrylic on canvas
+    </h3>
+
+    <div class="artwork-meta">
+      2006
+    </div>
+  </div>
+
+</article>
 
   <!-- Artwork 2: Toronto -->
   <h2 class="section-heading">02 — Toronto</h2>
