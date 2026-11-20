@@ -126,8 +126,55 @@ hr {
     transparent
   );
   margin: 55px 0;
+
+  /* Signature */
+}
+.signature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 20px;
+  text-align: center;
 }
 
+.signature-frame {
+  padding: 25px 40px;
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #f3f3f3
+  );
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08),
+    0 3px 8px rgba(0,0,0,0.04);
+  transition: all 0.4s ease;
+}
+
+.signature-frame:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.13);
+}
+
+.signature-image {
+  display: block;
+  max-width: 100%;
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  filter: contrast(1.08);
+}
+
+.signature-caption {
+  margin-top: 18px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #888;
+  text-transform: uppercase;
+}
 
 /* Gallery */
 
@@ -381,6 +428,17 @@ footer a:hover {
         representation, observation, and visual expression.
 
       </p>
+
+      <div class="signature-container">
+  <div class="signature-frame">
+    <img
+      src="https://raw.githubusercontent.com/boivinryan/profile/refs/heads/main/images/signature-ryan-bw.png"
+      alt="Ryan's Signature"
+      class="signature-image"
+    />
+  </div>
+  <div class="signature-caption">— Ryan —</div>
+</div>
 <div class="w3-center">
   <a href="pdfs/Ryan Boivin Art Portfolio - Proposed Project 2027.pdf"
      class="w3-button w3-light-grey w3-padding-large w3-margin-top">
